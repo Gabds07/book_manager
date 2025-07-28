@@ -373,6 +373,6 @@ C:/Users/gabri/Documents/lib_books_management/mainwindow.h
  mdp:C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
  mdp:C:/Users/gabri/Documents/lib_books_management/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/lib_books_management_autogen/moc_predefs.h
  mdp:C:/Users/gabri/Documents/lib_books_management/mainwindow.h
-C:/Users/gabri/Documents/lib_books_management/main.cpp
 C:/Users/gabri/Documents/lib_books_management/mainwindow.cpp
  uic:./ui_mainwindow.h
+C:/Users/gabri/Documents/lib_books_management/main.cpp
