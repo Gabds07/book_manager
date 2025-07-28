@@ -1,9 +1,0 @@
-# ninja log v6
-797	13357	7754453462615642	CMakeFiles/lib_books_management.dir/mainwindow.cpp.obj	123eb67bdc267b1a
-126	778	7754453455914169	C:/Users/gabri/Documents/lib_books_management/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/lib_books_management_autogen/timestamp	87a307a595e03a7c
-126	778	7754453455914169	lib_books_management_autogen/timestamp	87a307a595e03a7c
-13360	14949	7754453588258303	lib_books_management.exe	74c8e337a23279b
-126	778	7754453455914169	lib_books_management_autogen/mocs_compilation.cpp	87a307a595e03a7c
-126	778	7754453455914169	C:/Users/gabri/Documents/lib_books_management/build/Desktop_Qt_6_9_1_MinGW_64_bit-Debug/lib_books_management_autogen/mocs_compilation.cpp	87a307a595e03a7c
-1470	6670	7754431807125373	CMakeFiles/lib_books_management.dir/lib_books_management_autogen/mocs_compilation.cpp.obj	4c54671a9081ce41
-782	11324	7754453462480364	CMakeFiles/lib_books_management.dir/main.cpp.obj	622a05bcba6a0fef
