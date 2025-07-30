@@ -23,6 +23,8 @@ private slots:
 
     void on_btn_load_clicked();
 
+    void on_books_table_cellClicked(int row);
+
 private:
     Ui::MainWindow *ui;
 };

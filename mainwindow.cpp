@@ -2,6 +2,8 @@
 #include "./ui_mainwindow.h"
 #include <QFileDialog>
 #include <QSettings>
+#include <windows.h>
+#include <shellapi.h>
 
 MainWindow::MainWindow(QWidget *parent):QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -12,10 +14,11 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::on_btn_send_book_clicked() {
-    QStringList books_files = QFileDialog::getOpenFileNames(this, "Abrir arquivo", "", "Arquivos para kindle (*.mobi);; Todos (*.*)");
+    QStringList books_files = QFileDialog::getOpenFileNames(this, "Abrir arquivo", "", "Arquivos para kindle (*.mobi; *.DOC; *.HTML; *.TXT; *.JPEG; *.PDF; *.EPUB);; "
+    "Todos (*.*)");
     if(books_files.isEmpty()) return;
 
-    for(const QString &filePath : books_files) {
+    for (const QString &filePath: books_files) {
         QFileInfo info(filePath);
 
         int row = ui->books_table->rowCount();
@@ -23,9 +26,8 @@ void MainWindow::on_btn_send_book_clicked() {
 
         ui->books_table->setItem(row, 0, new QTableWidgetItem(info.fileName()));
         ui->books_table->setItem(row, 1, new QTableWidgetItem(info.absolutePath()));
-        ui->books_table->setItem(row, 2, new QTableWidgetItem(QString::number(info.size() / 1000) + " kb"));
+        ui->books_table->setItem(row, 2, new QTableWidgetItem(QString::number(info.size() / 1000) + " KB"));
     }
-
 }
 
 
@@ -71,3 +73,9 @@ void MainWindow::on_btn_load_clicked() {
     books.endGroup();
 }
 
+
+void MainWindow::on_books_table_cellClicked(int row) {
+    QTableWidgetItem *item = ui->books_table->item(row, 1);
+    std::wstring directory_path = item->text().QString::toStdWString();
+    ShellExecuteW(NULL, L"open", directory_path.c_str(), NULL, NULL, SW_SHOWNORMAL);
+}

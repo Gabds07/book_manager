@@ -49,7 +49,7 @@
      </rect>
     </property>
     <property name="cursor" stdset="0">
-     <cursorShape>PointingHandCursor</cursorShape>
+     <cursorShape>ArrowCursor</cursorShape>
     </property>
     <property name="mouseTracking">
      <bool>false</bool>
