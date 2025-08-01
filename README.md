@@ -14,6 +14,10 @@ When you reopen the program and click "Carregar", they'll appear again:
 
 ![Untitled video ‐ Made with Clipchamp (1)](https://github.com/user-attachments/assets/386afc0b-b9a3-4985-ba64-7bb71f103ad1)
 
+You can also double click wherever you want in the book to open in it's directory!
+
+![Vídeo sem título ‐ Feito com o Clipchamp](https://github.com/user-attachments/assets/1bac216c-7415-4807-a60c-b029a9625a86)
+
 <h2>The download is available in the Releases section.</h2>
 
 Enjoy!
