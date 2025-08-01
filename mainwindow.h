@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <qtablewidget.h>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -23,7 +24,9 @@ private slots:
 
     void on_btn_load_clicked();
 
-    void on_books_table_cellClicked(int row);
+    void on_books_table_cellDoubleClicked(int row);
+
+    void on_btn_delete_book_clicked();
 
 private:
     Ui::MainWindow *ui;

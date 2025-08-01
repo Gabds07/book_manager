@@ -4,6 +4,7 @@
 #include <QSettings>
 #include <windows.h>
 #include <shellapi.h>
+#include <QContextMenuEvent>
 
 MainWindow::MainWindow(QWidget *parent):QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
@@ -18,7 +19,7 @@ void MainWindow::on_btn_send_book_clicked() {
     "Todos (*.*)");
     if(books_files.isEmpty()) return;
 
-    for (const QString &filePath: books_files) {
+    for (const QString &filePath: std::as_const(books_files)) {
         QFileInfo info(filePath);
 
         int row = ui->books_table->rowCount();
@@ -73,9 +74,15 @@ void MainWindow::on_btn_load_clicked() {
     books.endGroup();
 }
 
-
-void MainWindow::on_books_table_cellClicked(int row) {
+void MainWindow::on_books_table_cellDoubleClicked(int row) {
     QTableWidgetItem *item = ui->books_table->item(row, 1);
     std::wstring directory_path = item->text().QString::toStdWString();
     ShellExecuteW(NULL, L"open", directory_path.c_str(), NULL, NULL, SW_SHOWNORMAL);
+}
+
+
+void MainWindow::on_btn_delete_book_clicked() {
+    int current_row = ui->books_table->currentRow();
+
+    ui->books_table->removeRow(current_row);
 }
