@@ -18,6 +18,4 @@ You can also double click wherever you want in the book to open in it's director
 
 ![Vídeo sem título ‐ Feito com o Clipchamp](https://github.com/user-attachments/assets/1bac216c-7415-4807-a60c-b029a9625a86)
 
-<h2>The download is available in the Releases section.</h2>
-
-Enjoy!
+<h3>The download is available in the <a href="https://github.com/Gabds07/book_manager/tags">Releases</a> section. Enjoy!</h3>
